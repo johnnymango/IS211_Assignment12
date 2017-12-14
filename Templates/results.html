@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>View Quiz Results</title>
+
+  </head>
+
+  <body>
+
+	<h1>View Quiz Results</h1>
+    <h2>Student Quiz Scores</h2>
+    <ul class="students">
+    {% for student in students %}
+        <li>{{ student.firstname }}, {{ student.lastname}}, {{ student.qz_subject }}, {{ student.score }}</li>
+    {% endfor %}
+    </ul><br>
+
+	<a href='/dashboard'>Return to Dashboard</a>
+
+
+  </body>
+</html>

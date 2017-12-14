@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Dashboard</title>
+
+  </head>
+
+  <body>
+
+	<h1>Dashboard</h1>
+    <h2>Students</h2>
+    <ul class="students">
+    {% for student in students %}
+        <li>{{ student.student_id }}, {{ student.firstname }}, {{ student.lastname }}</li>
+    {% endfor %}
+    </ul><br>
+    <h2>Quizzes</h2>
+	<ul class="quizzes">
+    {% for quiz in quizzes %}
+        <li>{{ quiz.quiz_id }}, {{ quiz.qz_subject }}, {{ quiz.questions }}, {{ quiz.quiz_date }}</li>
+    {% endfor %}
+    </ul><br>
+	<a href='/student/add'>Add Student</a>
+	<a href='/quiz/add'>Add Quiz</a>
+	<a href='/results/add'>Add Scores</a>
+    <a href='/results'>View Quiz Results</a>
+
+
+  </body>
+</html>
